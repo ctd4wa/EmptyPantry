@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "username": "github",
+    "password": "github",
+    "database": "emptypantry",
     "host": "localhost",
     "dialect": "mysql"
   },
