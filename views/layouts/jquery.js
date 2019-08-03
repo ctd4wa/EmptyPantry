@@ -32,7 +32,7 @@ function searchIngredient() {
       sourceOne.text("Source");
       var imageOne = $("<img class='card-img-top'>").attr("src", imgURL);
       var recipeIdOne = $("<p class='card-text'>").text("ID: " + recipeId);
-      var buttonLike = $("<button class='btn btn-primary'>").on(
+      var buttonLike = $("<button class='btn btn-primary'><i class='fa fa-thumbs-up'></i>").on(
         "click",
         function() {
           event.preventDefault();
@@ -50,7 +50,7 @@ function searchIngredient() {
           });
         }
       );
-      var buttonPin = $("<button class='btn btn-danger'>").on(
+      var buttonPin = $("<button class='btn btn-danger'><i class='fa fa-thumbtack'></i>").on(
         "click",
         function() {
           event.preventDefault();
