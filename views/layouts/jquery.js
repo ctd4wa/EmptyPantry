@@ -1,4 +1,7 @@
-var key = "3d0ca4168d5bfa646333274dcc83da26";
+$(document).ready(function() {
+  $("#result-box").hide();
+});
+var key = "590f612b2e3dc1a3d83a79d076599e77";
 var userInput = [];
 var terms = "";
 
@@ -13,6 +16,7 @@ function searchIngredient() {
     url: QueryURL,
     method: "GET"
   }).then(function(response) {
+    $("result-box").show();
     var test = JSON.parse(response);
     for (let i = 0; i < 8; i++) {
       var recipeDiv = $("<div class='card'>");
@@ -37,8 +41,8 @@ function searchIngredient() {
       recipeDiv.append(sourceOne);
       recipeDiv.append(pubOne);
       recipeDiv.append(imageOne);
-      recipeDiv.append(buttoneOne);
-      recipeDiv.append(buttonTwo);
+      //   recipeDiv.append(buttoneOne);
+      //   recipeDiv.append(buttonTwo);
 
       var check = $("#result-box-row").append(recipeDiv);
       $("#result-box").append(check);
@@ -47,6 +51,8 @@ function searchIngredient() {
 }
 
 $("#add-ingredient").on("click", function() {
+  $("#result-box").toggle();
+  $("result-box").show();
   event.preventDefault();
 
   userInput.push($("#ingredient-one").val());
