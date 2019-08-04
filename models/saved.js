@@ -1,19 +1,9 @@
-
-module.exports = (sequelize, type) => {
-    var Saved = sequelize.define('saveForLater', {
-        S_title: type.STRING,
-        S_source_url: type.STRING,
-        S_image_url: type.STRING,
-        S_userEmail: type.STRING,  
-    }, {
-        freezeTableName: true
+module.exports = function(sequelize, DataTypes) {
+    var svlaters = sequelize.define("svlaters", {
+        SVL_title:       DataTypes.STRING,
+        SVL_source_url:  DataTypes.STRING,
+        SVL_image_url:   DataTypes.STRING,
+        SVL_Email:       DataTypes.STRING
     });
-    Saved.associate = function(models) {
-        Saved.belongsTo(models.Users, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
-    return Saved;
-}
+    return svlaters;
+  };

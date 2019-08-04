@@ -1,20 +1,12 @@
-
-module.exports = function(sequelize, type) {
-  var Like = sequelize.define('likes', {
-      L_title: type.STRING,
-      L_source_url: type.STRING,
-      L_image_url: type.STRING,
-      l_like_Email: type.STRING,  
-  }, {
-      freezeTableName: true
-  });
-  Like.associate = function(models) {
-      Like.belongsTo(models.Users, {
-          foreignKey: {
-              allowNull: false
-          },
-          foreignKey: "userEmail"
-      });
+console.log("Inside likes.js (Model)");
+​
+​
+module.exports = function(sequelize, DataTypes) {
+    var likes = sequelize.define("likes", {
+        L_title:       DataTypes.STRING,
+        L_source_url:  DataTypes.STRING,
+        L_image_url:   DataTypes.STRING,
+        L_Email:       DataTypes.STRING
+    });
+    return likes;
   };
-  return Like;
-}
