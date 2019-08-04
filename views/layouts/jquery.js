@@ -47,6 +47,7 @@ function searchIngredient() {
         }).then(function(response) {
           var likeSearch = JSON.parse(response);
           console.log(likeSearch);
+<<<<<<< HEAD
           $("#like-table > tbody").append(
             $("<tr>").append(
               $("<td>").text(likeSearch.recipe.title),
@@ -57,6 +58,9 @@ function searchIngredient() {
           );
           event.preventDefault();
           location.reload();
+=======
+         // $.post("/api/like", likeSearch);
+>>>>>>> f33f0ecd11bbf5f39c900aec21ee154b6cc40b83
         });
       });
 
@@ -75,6 +79,7 @@ function searchIngredient() {
         }).then(function(response) {
           var pinSearch = JSON.parse(response);
           console.log(pinSearch);
+<<<<<<< HEAD
           $("#save-table > tbody").append(
             $("<tr>").append(
               $("<td>").text(pinSearch.recipe.title),
@@ -85,6 +90,9 @@ function searchIngredient() {
           );
           event.preventDefault();
           location.reload();
+=======
+          $.post("/api/svlater", pinSearch);
+>>>>>>> f33f0ecd11bbf5f39c900aec21ee154b6cc40b83
         });
       });
       recipeDiv.append(titleOne);

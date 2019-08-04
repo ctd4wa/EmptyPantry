@@ -1,5 +1,5 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "handlebars-boilerplate",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
@@ -12,12 +12,15 @@
   "license": "ISC",
   "dependencies": {
     "animate.css": "^3.7.2",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.8.6"
+    "nodemon": "^1.19.1",
+    "sequelize": "^5.12.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -28,5 +31,17 @@
     "eslint-plugin-prettier": "^3.1.0",
     "mocha": "^6.1.4",
     "prettier": "^1.17.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctd4wa/EmptyPantry.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ctd4wa/EmptyPantry/issues"
+  },
+  "homepage": "https://github.com/ctd4wa/EmptyPantry#readme"
 }
