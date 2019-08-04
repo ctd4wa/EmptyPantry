@@ -19,7 +19,7 @@ function searchIngredient() {
   }).then(function(response) {
     var test = JSON.parse(response);
     for (let i = 0; i < 8; i++) {
-      var recipeDiv = $("<div class='card'>");
+      var recipeDiv = $("<div class='card stop'>");
       var title = test.recipes[i].title;
       var sourceURL = test.recipes[i].source_url;
       var imgURL = test.recipes[i].image_url;
@@ -47,8 +47,19 @@ function searchIngredient() {
         }).then(function(response) {
           var likeSearch = JSON.parse(response);
           console.log(likeSearch);
+          $("#like-table > tbody").append(
+            $("<tr>").append(
+              $("<td>").text(likeSearch.recipe.title),
+              $("<td>").text(likeSearch.recipe.source_url),
+              $("<td>").text(likeSearch.recipe.publisher),
+              $("<td>").text(likeSearch.recipe.recipe_id)
+            )
+          );
+          event.preventDefault();
+          location.reload();
         });
       });
+
       var buttonPin = $(
         "<button class='btn btn-danger'><i class='fa fa-thumbtack'></i>"
       ).on("click", function() {
@@ -64,6 +75,16 @@ function searchIngredient() {
         }).then(function(response) {
           var pinSearch = JSON.parse(response);
           console.log(pinSearch);
+          $("#save-table > tbody").append(
+            $("<tr>").append(
+              $("<td>").text(pinSearch.recipe.title),
+              $("<td>").text(pinSearch.recipe.source_url),
+              $("<td>").text(pinSearch.recipe.publisher),
+              $("<td>").text(pinSearch.recipe.recipe_id)
+            )
+          );
+          event.preventDefault();
+          location.reload();
         });
       });
       recipeDiv.append(titleOne);
