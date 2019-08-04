@@ -16,7 +16,6 @@ function searchIngredient() {
     url: QueryURL,
     method: "GET"
   }).then(function(response) {
-    $("result-box").show();
     var test = JSON.parse(response);
     for (let i = 0; i < 8; i++) {
       var recipeDiv = $("<div class='card'>");
@@ -32,42 +31,40 @@ function searchIngredient() {
       sourceOne.text("Source");
       var imageOne = $("<img class='card-img-top'>").attr("src", imgURL);
       var recipeIdOne = $("<p class='card-text'>").text("ID: " + recipeId);
-      var buttonLike = $("<button class='btn btn-primary'><i class='fa fa-thumbs-up'></i>").on(
-        "click",
-        function() {
-          event.preventDefault();
-          var query =
-            "https://www.food2fork.com/api/get?key=" +
-            key +
-            "&rId=" +
-            test.recipes[i].recipe_id;
-          $.ajax({
-            url: query,
-            method: "GET"
-          }).then(function(response) {
-            var likeSearch = JSON.parse(response);
-            console.log(likeSearch);
-          });
-        }
-      );
-      var buttonPin = $("<button class='btn btn-danger'><i class='fa fa-thumbtack'></i>").on(
-        "click",
-        function() {
-          event.preventDefault();
-          var query2 =
-            "https://www.food2fork.com/api/get?key=" +
-            key +
-            "&rId=" +
-            test.recipes[i].recipe_id;
-          $.ajax({
-            url: query2,
-            method: "GET"
-          }).then(function(response) {
-            var pinSearch = JSON.parse(response);
-            console.log(pinSearch);
-          });
-        }
-      );
+      var buttonLike = $(
+        "<button class='btn btn-primary'><i class='fa fa-thumbs-up'></i>"
+      ).on("click", function() {
+        event.preventDefault();
+        var query =
+          "https://www.food2fork.com/api/get?key=" +
+          key +
+          "&rId=" +
+          test.recipes[i].recipe_id;
+        $.ajax({
+          url: query,
+          method: "GET"
+        }).then(function(response) {
+          var likeSearch = JSON.parse(response);
+          console.log(likeSearch);
+        });
+      });
+      var buttonPin = $(
+        "<button class='btn btn-danger'><i class='fa fa-thumbtack'></i>"
+      ).on("click", function() {
+        event.preventDefault();
+        var query2 =
+          "https://www.food2fork.com/api/get?key=" +
+          key +
+          "&rId=" +
+          test.recipes[i].recipe_id;
+        $.ajax({
+          url: query2,
+          method: "GET"
+        }).then(function(response) {
+          var pinSearch = JSON.parse(response);
+          console.log(pinSearch);
+        });
+      });
       recipeDiv.append(titleOne);
       recipeDiv.append(sourceOne);
       recipeDiv.append(pubOne);
@@ -83,8 +80,8 @@ function searchIngredient() {
 }
 
 $("#add-ingredient").on("click", function() {
-  $("#result-box").toggle();
-  $("result-box").show();
+  $("#result-box").show();
+
   event.preventDefault();
 
   userInput.push($("#ingredient-one").val());

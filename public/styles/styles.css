@@ -31,8 +31,6 @@ body {
   border-style: solid;
   border-width: 6px;
   overflow: scroll;
-
-  /* visibility: hidden; */
 }
 #favorite-list {
   margin-top: 50px;
@@ -43,7 +41,6 @@ body {
   background: rgb(221, 216, 207);
   border-style: solid;
   border-width: 6px;
-  /* visibility: hidden; */
 }
 #future-meals-list {
   margin-top: 50px;
@@ -54,12 +51,10 @@ body {
   background: rgb(221, 216, 207);
   border-style: solid;
   border-width: 6px;
-  /* visibility: hidden; */
 }
 #social-links {
-  float: right;
   color: white;
-  padding-left: 1100px;
+  position: relative;
 }
 #register-form {
   margin-top: 50px;
@@ -80,6 +75,7 @@ body {
   background: rgb(221, 216, 207);
   border-style: solid;
   border-width: 6px;
+  position: relative;
 }
 .card {
   width: 12rem;
@@ -91,7 +87,6 @@ body {
 }
 /* splash page */
 #splash-info {
-  /* background: url("cherry-tomatoe.jpg"); */
   margin-top: 50px;
   padding: 15px;
   opacity: 0.7;
@@ -116,4 +111,29 @@ a {
 }
 #recipe-id-form {
   padding: 5px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(56, 56, 56);
+  color: white;
+  text-align: center;
+  font-size: 10px;
+}
+#navbar-right {
+  float: right;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  #navbar-left {
+    float: right;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
 }
