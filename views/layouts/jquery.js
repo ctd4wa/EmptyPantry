@@ -1,7 +1,8 @@
 $(document).ready(function() {
   $("#result-box").hide();
 });
-var key = "590f612b2e3dc1a3d83a79d076599e77";
+// Chris's Key starts with 3 and is subject to change based on how many calls are made
+var key = "3d0ca4168d5bfa646333274dcc83da26";
 var userInput = [];
 var terms = "";
 
