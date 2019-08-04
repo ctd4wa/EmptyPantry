@@ -47,7 +47,7 @@ function searchIngredient() {
         }).then(function(response) {
           var likeSearch = JSON.parse(response);
           console.log(likeSearch);
-         // $.post("/api/like", likeSearch);
+          $.post("/api/like", likeSearch);
         });
       });
       var buttonPin = $(
