@@ -1,6 +1,4 @@
 console.log("Inside likes.js (Model)");
-​
-​
 module.exports = function(sequelize, DataTypes) {
     var likes = sequelize.define("likes", {
         L_title:       DataTypes.STRING,
