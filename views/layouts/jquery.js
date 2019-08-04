@@ -1,8 +1,8 @@
 $(document).ready(function() {
   $("#result-box").hide();
 });
-// Chris's Key starts with 3 and is subject to change based on how many calls are made
-var key = "3d0ca4168d5bfa646333274dcc83da26";
+var logIn = $("#log-in-email").val();
+var key = "79c1282e164bb1d5a747fe99119ad388";
 var userInput = [];
 var terms = "";
 
