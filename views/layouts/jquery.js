@@ -1,7 +1,8 @@
 $(document).ready(function() {
   $("#result-box").hide();
 });
-var key = "590f612b2e3dc1a3d83a79d076599e77";
+var logIn = $("#log-in-email").val();
+var key = "79c1282e164bb1d5a747fe99119ad388";
 var userInput = [];
 var terms = "";
 
