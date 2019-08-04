@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--Attaching the necessary stylesheets and external links-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -19,64 +20,70 @@
     <title>Document</title>
   </head>
   <body>
-     
+     <div class = "header">
         <div id = "navbar">
-        <!-- Image and text -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id = "navContent">
-          <span class = "animated bounce delay-2s">
-          <a class="navbar-brand" href="#">
-            <i class="fa fa-bread-slice"></i> EmptyPantry
-          </a>
-      </span>
-          <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Image and text navbar -->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id = "navContent">
+            <span class = "animated bounce delay-2s">
+              <a class="navbar-brand" href="#">
+                <i class="fa fa-bread-slice"></i> EmptyPantry
+              </a>
+            </span>
+        <!-- Links in navbar  -->
+            <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
-                    <li class="nav-item">
+                      <li class="nav-item" id = "web-links">
                           <a class="nav-link" href="splash.html">Home</a>
-                    </li>
+                      </li>
                            <li class="nav-item">
                                   <a class="nav-link" href="main.html">Search</a>
                            </li>
                   </ul>
-                  <span class = "animated bounce delay-2s" id = "social-links">
-                          <a href= "https://www.facebook.com/"><i class="fab fa-facebook"></i></a>|   
-                          <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>|  
-                          <a href= "https://www.instagram.com/"><i class="fab fa-instagram"></i></a>|     
-                          <a href= "https://github.com/ctd4wa/EmptyPantry"><i class="fab fa-github"></i></a>|     
-                  </span>
-                </div>
-        </nav>
-      </div>
+                 
+            </div>
+          </nav>
+        </div>
+     </div>
       <div class = "container" id = "huge-box">
+        <!-- Splash information explaining how the application works -->
+          <div class = "container">
+              <div class = "col-md-" id = "splash-info">
 
-    <div class = "container">
-    <div class = "col-md-" id = "splash-info">
-
-            <span class = "animated bounce delay-2s"><h1><i class="fa fa-bread-slice"></i> EmptyPantry</h1></span>
-        <br>
-        <p>EmptyPantry is a full-stack web application that allows you to take full advantage of what groceries you have in your house</p>
-        <p>Simply log in or register for the application and click on the search tab to find put in your ingredients into the form.</p>
-        <p>Upon your request EmptyPantry will fetch you a curated list of recipes you can create based on the ingredients you entered </p>
-
-    </div>
-    </div>
-
-    <div class="container" id = "new-user-box">
-      <div class="row">
-       
-        
-        <div class="col-md-12" id="log-in-form">
-        <form>
+                <span class = "animated bounce delay-2s"><h1><i class="fa fa-bread-slice"></i> EmptyPantry</h1></span>
+                <br>
+        <p>EmptyPantry is a full-stack web application that allows you to take full advantage of the groceries you have in your house
+        Simply log into the application put in your ingredients into the form, and click search.
+        Upon your request EmptyPantry will fetch you a curated list of recipes you can create based on the ingredients you entered.
+       If you tried the recipe and liked it hit the thumbs-up tab to add it to the reccomended database, or the red-pin for ones you want to try later.</p>
+              </div>
+          </div>
+        <!-- Div containg the form where the user logs in -->
+          <div class="container" id = "new-user-box">
+              <div class="row">
+                  <div class="col-md-12" id="log-in-form">
+                <form>
                 <div class="form-group">
                   <label for="exampleFormControlInput1"><h4>Log In</h4></label>
-                  <input type="input" class="form-control" id="log-in-email" placeholder="Email">
-                  <input type="input" class="form-control" id="log-in-password" placeholder="Password">
+                  <input type="email" class="form-control" id="log-in-email" placeholder="Email">
+                  
                   
                  
                 </div>
                 <button type="button" class="btn btn-secondary" id = "register-button"><span id = "register-tag"><a href= "main.html">Log In</a></span></button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+  <!-- Creating footer -->
+  <div class="footer">
+        <p> Copyright ©2019</p>
+        <span class = "animated bounce delay-2s" id = "social-links">
+          <a href= "https://www.facebook.com/"><i class="fab fa-facebook"></i></a>|   
+          <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>|  
+          <a href= "https://www.instagram.com/"><i class="fab fa-instagram"></i></a>|     
+          <a href= "https://github.com/ctd4wa/EmptyPantry"><i class="fab fa-github"></i></a>     
+  </span>
       </div>
-    </div>
-  </div>
-  </div>
   </body>
 </html>

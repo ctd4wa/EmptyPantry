@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--Attaching the necessary stylesheets and external links-->
     <meta charset="utf-8" />
     <link
       rel="stylesheet"
@@ -22,61 +23,66 @@
   <body>
    
     <div id = "navbar">
-      <!-- Image and text -->
+      <!-- Image and text navbar-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id = "navContent">
         <span class = "animated bounce delay-2s">
         <a class="navbar-brand" href="#">
           <i class="fa fa-bread-slice"></i> EmptyPantry
         </a>
     </span>
-        <div class="collapse navbar-collapse" id="navbarNav">
+       <!-- Links in navbar  -->
+        <div class="collapse navbar-collapse" id="navbar-left">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="splash.html">Home</a>
-                  </li>
+                    </li>
                          <li class="nav-item">
                                 <a class="nav-link" href="main.html">Search</a>
                          </li>
                 </ul>
-                <span class = "animated bounce delay-2s" id = "social-links">
-                        <a href= "https://www.facebook.com/"><i class="fab fa-facebook"></i></a>|   
-                        <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>|  
-                        <a href= "https://www.instagram.com/"><i class="fab fa-instagram"></i></a>|     
-                        <a href= "https://github.com/ctd4wa/EmptyPantry"><i class="fab fa-github"></i></a>|     
-                </span>
-              </div>
+        </div>
       </nav>
     </div>
     
     <div>
-        
+        <!-- input field for the user to select their ingredients and capture their -->
       <div class="container">
           <div id = "Ingredient-Forms">
             <form>
                     <div class="form-group">
                       <label for="exampleFormControlInput1"><h4>Ingredients</h4></label>
-                      <input type="email" class="form-control" id="ingredient-one" placeholder="Tomatoes">
-                      <input type="email" class="form-control" id="ingredient-two" placeholder="Corn">
-                      <input type="email" class="form-control" id="ingredient-three" placeholder="Lettuce">
-                      <input type="email" class="form-control" id="ingredient-four" placeholder="Pinto Beans">
-                      <input type="email" class="form-control" id="ingredient-five" placeholder="Brown Rice">
+                      <input type="input" class="form-control" id="ingredient-one" placeholder="Tomatoes">
+                      <input type="input" class="form-control" id="ingredient-two" placeholder="Corn">
+                      <input type="input" class="form-control" id="ingredient-three" placeholder="Lettuce">
+                      <input type="input" class="form-control" id="ingredient-four" placeholder="Pinto Beans">
+                      <input type="input" class="form-control" id="ingredient-five" placeholder="Brown Rice">
                      
                     </div>
-                    <button type="button" class="btn btn-secondary" id = "add-ingredient">Search for recipes</button>
-                    <br>
-
-      </div>
+                        <div>
+                          <button type="button" class="btn btn-secondary" id = "add-ingredient">Search for recipes</button>
+                          <br>
+                        </div>
+            </div>
            
-    </div>
-    </div>
+          </div>
+      </div>
+    <!-- div for where the recipes will render -->
     <div class="container" id ="result-box">
         <div class ="row" id ="result-box-row">
         
         </div>
     </div>
     
-       
-
+    <!-- footer along with social links -->
+    <div class="footer">
+      <p> Copyright ©2019</p>
+      <span class = "animated bounce delay-2s" id = "social-links">
+        <a href= "https://www.facebook.com/"><i class="fab fa-facebook"></i></a>|   
+        <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>|  
+        <a href= "https://www.instagram.com/"><i class="fab fa-instagram"></i></a>|     
+        <a href= "https://github.com/ctd4wa/EmptyPantry"><i class="fab fa-github"></i></a>    
+      </span>
+    </div>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="jquery.js"></script>
