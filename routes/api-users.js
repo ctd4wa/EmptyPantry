@@ -9,6 +9,7 @@ console.log("Running api-users.js");
 // =============================================================
 
 // Requiring our user model
+var path = require("path");
 var db = require("../models");
 
 // Routes
