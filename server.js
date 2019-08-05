@@ -28,7 +28,7 @@ app.set("view engine", "handlebars");
 // Routes
 //require("./routes/index.route");
 require("./routes/apiRoutes")(app);
-//require("./routes/htmlRoutes")(app);
+require("./routes/htmlRoutes")(app);
 require("./routes/api-users")(app);
 require("./routes/api-like")(app);
 require("./routes/api-svlater")(app);

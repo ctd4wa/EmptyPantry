@@ -13,17 +13,15 @@ module.exports = function(app) {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
   // index route loads view.html
-  app.get("/main", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/layouts/main.html"));
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../views/layouts/splash.html"));
   });
-
   app.get("/index2", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/layouts/index2.html"));
+    res.sendFile(path.join(__dirname, "/../views/layouts/index2.html"));
   });
-
   // blog route loads blog.html
-  app.get("/splash", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/layouts/splash.html"));
+  app.get("/main", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../views/layouts/main.html"));
   });
 
 };
