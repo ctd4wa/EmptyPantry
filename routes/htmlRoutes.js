@@ -1,31 +1,29 @@
-var db = require("../models");
+// *********************************************************************************
+// html-routes.js - this file offers a set of routes for sending users to the various html pages
+// *********************************************************************************
 
+// Dependencies
+// =============================================================
+var path = require("path");
+
+// Routes
+// =============================================================
 module.exports = function(app) {
-  // Load index page
+
+  // Each of the below routes just handles the HTML page that the user gets sent to.
+
+  // index route loads view.html
   app.get("/", function(req, res) {
-    db.likes.findAll({}).then(function(likes) {
-      res.sendFile("./views/layouts/main.html", {
-        msg: "Welcome!",
-        examples: likes
-      });
-    });
+    res.sendFile(path.join(__dirname, "../views/layouts/main.html"));
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbEmptypantry) {
-      res.sendFile("main.html", {
-        example: dbEmptypantry
-      });
-    });
+  app.get("/index2", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/layouts/index2.html"));
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+  // blog route loads blog.html
+  app.get("/splash", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/layouts/splash.html"));
   });
 
-  app.get('*',function (req, res) {
-    res.redirect('main.html');
-});
 };
