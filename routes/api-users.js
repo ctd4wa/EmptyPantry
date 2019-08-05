@@ -9,11 +9,16 @@ console.log("Running api-users.js");
 // =============================================================
 
 // Requiring our user model
+var path = require("path");
 var db = require("../models");
 
 // Routes
 // =============================================================
 module.exports = function(app) {
+
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/layouts/splash.html"))
+    })
 
   // POST route for saving a new like
   app.post("/api/like", function(req, res) 

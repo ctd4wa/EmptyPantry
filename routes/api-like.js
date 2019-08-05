@@ -16,7 +16,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   // POST route for saving a new like
-  app.post("/api/like", function(req, res) 
+  app.post("/api/likes", function(req, res) 
     {
         console.log("Reggie, posting likes");
         console.log(req.body);
@@ -25,10 +25,11 @@ module.exports = function(app) {
         // and complete property (req.body)
         db.likes.create
         ({
-          L_title:      "likeSearch.title", 
-          L_source_url:  "likeSearch.sourceurl",
-          L_image_url:   "likeSearch.imageurl",
-          L_Email:      "john.doe@verizon.net"
+          recieptTitle:  likeSearch.recipe.title,
+          sourceUrl:     likeSearch.recipe.title,
+          publisher:     likeSearch.recipe.publisher,
+          recipeID:      likeSearch.recipe.recipe_id,
+          userEmail:     DataTypes.STRING,
         }).then(function(dblikes) 
         {
           // We have access to the new likes as an argument inside of the callback function
