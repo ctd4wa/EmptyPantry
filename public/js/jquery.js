@@ -1,7 +1,16 @@
 $(document).ready(function() {
   $("#result-box").hide();
 });
-var logIn = $("#log-in-email").val();
+  // Event Listener for creating new User
+  $("#register-button").click(function(){
+    var logIn = $("#log-in-email").val().trim();
+      $.ajax({
+        url: "/api/users",
+        method: "POST",
+        data: logIn,
+      }).then(function(){ location.href = "/api/search"})
+  });
+
 var key = "79c1282e164bb1d5a747fe99119ad388";
 var userInput = [];
 var terms = "";

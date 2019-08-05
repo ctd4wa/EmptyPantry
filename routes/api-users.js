@@ -15,6 +15,10 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/layouts/splash.html"))
+    })
+
   // POST route for saving a new like
   app.post("/api/like", function(req, res) 
     {

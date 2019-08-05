@@ -16,7 +16,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   // POST route for saving a new like
-  app.post("/api/like", function(req, res) 
+  app.post("/api/likes", function(req, res) 
     {
         console.log("Reggie, posting likes");
         console.log(req.body);
